@@ -1,3 +1,4 @@
+import json
 from flask import Flask, request, jsonify
 import uuid
 from hashlib import sha256
@@ -57,7 +58,12 @@ def anonimizar_usuario(id):
 def excluir_usuario(id):
     global usuarios
     usuarios = [usuario for usuario in usuarios if usuario['id'] != id]
-    return jsonify({"message": "Usuário excluído com sucesso"}), 200
+    mensagem = {"message": "Usuário excluído com sucesso"}
+    return app.response_class(
+        response=json.dumps(mensagem, ensure_ascii=False),
+        mimetype='application/json'
+    )
+
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)

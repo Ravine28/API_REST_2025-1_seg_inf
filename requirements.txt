@@ -1,1 +1,3 @@
-flask
+requirements_content = """
+flask==2.3.3
+"""

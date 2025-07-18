@@ -56,7 +56,7 @@ Cria um novo usuário.
 - cpf (criptografado via hash)
 
 ex.:
-curl -X POST http://localhost:5000/usuarios -H "Content-Type: application/json" -d '{
+curl -X POST http://127.0.0.1:5000 -H "Content-Type: application/json" -d '{
   "nome_completo": "Smeagol Miguel",
   "email": "smeagol@email.com",
   "cpf": 00000000011
@@ -65,7 +65,7 @@ curl -X POST http://localhost:5000/usuarios -H "Content-Type: application/json" 
 ---
 
 ### GET /usuarios/<id>
-Retorna os dados do usuário sem a senha.
+Retorna os dados do usuário via ID.
 
 ex.:
 Ver usuário com ID 1
@@ -88,15 +88,6 @@ Remove dados pessoais, substituindo-os por valores genéricos ou nulos.
 ex.: 
 Anonimizar usuário com ID 1
 curl -X POST http://localhost:5000/usuarios/1/anonimizar
-
----
-
-### GET /politica-privacidade
-Retorna um resumo da política de privacidade da aplicação.
-
-ex.: 
-Ver política de privacidade
-curl http://localhost:5000/politica-privacidade
 
 ---
 

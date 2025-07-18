@@ -49,9 +49,10 @@ def anonimizar_usuario(id):
     for usuario in usuarios:
         if usuario['id'] == id:
             usuario['cpf_hash'] = 'ANONIMIZADO'
-            return jsonify(usuario)
-    
-    return jsonify({"error": "Usuário não encontrado"}), 404
+    return app.response_class(
+        response=json.dumps({"error": "Usuário não encontrado"}, ensure_ascii=False),
+        mimetype='application/json'
+), 404
 
 #(endpoint) rota para excluir um usuário pelo ID
 @app.route('/usuarios/<id>', methods=['DELETE'])

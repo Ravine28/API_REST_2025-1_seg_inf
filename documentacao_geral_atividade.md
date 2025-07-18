@@ -30,7 +30,7 @@ Transparência
 # Endpoints da API
 Criar usuário
 - Método:
--     POST
+    - POST
 
     Rota: 
         /usuarios

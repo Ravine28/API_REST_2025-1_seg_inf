@@ -3,6 +3,44 @@
 ## Contexto
 Sistema fictício de cadastro para agendamento de serviços para pessoas neurodivergentes. A API respeita os princípios da LGPD desde sua concepção.
 
+### 1. Dados coletados
+nome (string)
+
+email (string)
+
+CPF (criptografado via hash)
+
+### 2. Finalidade da coleta
+Gerenciar registros de usuários na aplicação
+
+Fornecer funcionalidades CRUD (Create, Read, Update, Delete)
+
+Armazenamento local em memória (educacional/teste)
+
+### 3. Local de armazenamento
+Os dados são mantidos em memória (RAM) durante a execução do sistema (não persistidos em banco)
+
+Para ambiente real, recomenda-se armazenamento seguro com banco de dados criptografado
+
+### 4. Proteção dos dados
+CPF é protegido em repouso usando hash SHA-256
+
+Em produção, recomenda-se execução sob HTTPS (criptografia em trânsito)
+
+Dados não são compartilhados com terceiros
+
+### 5. Direito do titular
+Pode solicitar exclusão de seus dados via requisição DELETE na rota /usuarios/<id>
+
+Como os CPFs são anonimizados (hash irreversível), os dados são considerados protegidos em repouso
+
+Não é possível recuperar o CPF original a partir do hash, protegendo a identidade
+
+### 6. Regras de acesso
+Todas as requisições são públicas (ambiente de teste)
+
+Para produção, recomenda-se autenticação por token e controle de papéis (admin/usuário)
+
 ---
 
 ## Endpoints

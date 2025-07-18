@@ -54,14 +54,12 @@ Cria um novo usuário.
 - nome_completo (string)
 - email (string)
 - cpf (criptografado via hash)
-- senha (string)
 
 ex.:
 curl -X POST http://localhost:5000/usuarios -H "Content-Type: application/json" -d '{
   "nome_completo": "João da Silva",
   "email": "joana@email.com",
   "cpf": 00000000011
-  "senha": "minhasenha123"
 }'
 
 ---

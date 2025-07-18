@@ -7,13 +7,11 @@ Coletamos os seguintes dados:
 - Nome completo
 - E-mail
 - CPF (anonimizado)
-- Senha (criptografada)
 
 Finalidade:
 -   Nome para identificaççao social;
 -   e-mail para login e notificaçoes/contato;
 -   CPF para identificação única por cadastro;
--   senha para garantir privacidade e individualiza~çao deacesso
 
 Armazenamento:
 - Os dados são armazenados temporariamente em memória. Não são persistidos em banco de dados para esta simulação.

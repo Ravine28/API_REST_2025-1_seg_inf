@@ -24,12 +24,12 @@ CPF é DIRETAMENTE armazenado em formato hash (SHA-256)
 ---
 
 ## Direito de exclusão
-Rota:
+- Rota:
 -     DELETE /usuarios/<id>
 ---
 
 ## Direito de anonimização
-Rota (neste caso, anonimizo somente o cpf_hash):
+- Rota (neste caso, anonimizo somente o cpf_hash):
 -     POST /usuarios/<id>/anonimizar
 ---
 
@@ -40,15 +40,15 @@ Rota (neste caso, anonimizo somente o cpf_hash):
 
 ## Criar usuário
 - Método: `POST`
-- Rota: `/usuarios`
+-     Rota: `/usuarios`
 
 Descrição: Cadastra um novo usuário. O CPF é automaticamente convertido para hash.
 
 ---
 
 ## Consultar usuário
-- Método: `GET`
-- Rota: `/usuarios/<id>`
+-     Método: `GET`
+-                   Rota: `/usuarios/<id>`
 
 Descrição: Retorna os dados do usuário com o id que foi informado (em hash).
 

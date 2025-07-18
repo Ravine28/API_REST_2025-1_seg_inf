@@ -10,6 +10,8 @@ email (string)
 
 CPF (criptografado via hash)
 
+senha (string)
+
 ### 2. Finalidade da coleta
 Gerenciar registros de usuários na aplicação
 
@@ -51,13 +53,14 @@ Cria um novo usuário.
 **Campos obrigatórios:**
 - nome_completo (string)
 - email (string)
-- nascimento (string)
+- cpf (criptografado via hash)
 - senha (string)
 
 ex.:
 curl -X POST http://localhost:5000/usuarios -H "Content-Type: application/json" -d '{
   "nome_completo": "João da Silva",
   "email": "joana@email.com",
+  "cpf": 00000000011
   "senha": "minhasenha123"
 }'
 

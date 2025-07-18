@@ -32,7 +32,7 @@ Criar usuário
 - Método:
     - POST
           -Rota:
-  -        /usuarios
+                    /usuarios
 
 Descrição: Cadastra um novo usuário. O CPF é automaticamente convertido para hash.
 

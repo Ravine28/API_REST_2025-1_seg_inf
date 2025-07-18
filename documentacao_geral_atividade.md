@@ -47,8 +47,8 @@ Descrição: Cadastra um novo usuário. O CPF é automaticamente convertido para
 ---
 
 ## Consultar usuário
--     Método: `GET`
--                   Rota: `/usuarios/<id>`
+- Método: `GET`
+-     Rota: `/usuarios/<id>`
 
 Descrição: Retorna os dados do usuário com o id que foi informado (em hash).
 
@@ -56,7 +56,7 @@ Descrição: Retorna os dados do usuário com o id que foi informado (em hash).
 
 ## Anonimizar usuário
 - Método: `POST`
-- Rota: `/usuarios/<id>/anonimizar`
+-     Rota: `/usuarios/<id>/anonimizar`
 
 Descrição: Substitui o hash do CPF do usuário pelo valor `"ANONIMIZADO"`.
 
@@ -64,7 +64,7 @@ Descrição: Substitui o hash do CPF do usuário pelo valor `"ANONIMIZADO"`.
 
 ## Excluir usuário
 - Método: `DELETE`
-- Rota: `/usuarios/<id>`
+-     Rota: `/usuarios/<id>`
 
 Descrição: Remove completamente o usuário da memória da aplicação.
 

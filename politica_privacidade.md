@@ -6,11 +6,14 @@ Apenas os dados necessários são coletados: nome, e-mail e CPF
 Coletamos os seguintes dados:
 - Nome completo
 - E-mail
-- CPF
+- CPF (anonimizado)
 - Senha (criptografada)
 
 Finalidade:
 - Cadastro para agendamento de consultas com profissionais às necessidades neurodivergentes.
+-   Nome para identificaççao social;
+-   e-mail para login e notificaçoes/contato;
+-   CPF para identificação única por cadastro;
 
 Armazenamento:
 - Os dados são armazenados temporariamente em memória. Não são persistidos em banco de dados para esta simulação.

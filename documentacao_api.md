@@ -54,17 +54,10 @@ Cria um novo usuário.
 - nascimento (string)
 - senha (string)
 
-**Campos opcionais:**
-- nome_social (string)
-- genero (string)
-
 ex.:
 curl -X POST http://localhost:5000/usuarios -H "Content-Type: application/json" -d '{
   "nome_completo": "João da Silva",
-  "nome_social": "Joana",
   "email": "joana@email.com",
-  "nascimento": "1990-01-01",
-  "genero": "não-binário",
   "senha": "minhasenha123"
 }'
 

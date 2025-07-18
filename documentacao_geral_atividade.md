@@ -29,8 +29,8 @@ Transparência
 
 # Endpoints da API
 Criar usuário
-- Método: 
-        POST
+- Método:
+-     POST
 
     Rota: 
         /usuarios

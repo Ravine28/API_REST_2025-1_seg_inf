@@ -30,4 +30,4 @@
 git clone https://github.com/Ravine28/API_REST_2025-1_seg_inf
 cd API_REST2025-1_SEG_INFO
 pip install -r requirements.txt
-python app.py
+python app_api_rest.py

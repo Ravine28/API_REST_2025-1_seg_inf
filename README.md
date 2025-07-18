@@ -18,7 +18,7 @@
 #### Criar um documento técnico/jurídico simplificado para um sistema desenvolvido pelos alunos.
 
 ### 📝 Tarefa:
-#### Criar uma Política de Privacidade cobrindo:
+Criar uma Política de Privacidade cobrindo:
 #### Quais dados são coletados
 #### Para que finalidade
 #### Onde são armazenados

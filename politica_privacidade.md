@@ -10,10 +10,10 @@ Coletamos os seguintes dados:
 - Senha (criptografada)
 
 Finalidade:
-- Cadastro para agendamento de consultas com profissionais às necessidades neurodivergentes.
 -   Nome para identificaççao social;
 -   e-mail para login e notificaçoes/contato;
 -   CPF para identificação única por cadastro;
+-   senha para garantir privacidade e individualiza~çao deacesso
 
 Armazenamento:
 - Os dados são armazenados temporariamente em memória. Não são persistidos em banco de dados para esta simulação.

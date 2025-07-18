@@ -57,8 +57,8 @@ Cria um novo usuário.
 
 ex.:
 curl -X POST http://localhost:5000/usuarios -H "Content-Type: application/json" -d '{
-  "nome_completo": "João da Silva",
-  "email": "joana@email.com",
+  "nome_completo": "Smeagol Miguel",
+  "email": "smeagol@email.com",
   "cpf": 00000000011
 }'
 

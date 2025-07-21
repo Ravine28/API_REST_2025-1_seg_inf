@@ -2,7 +2,6 @@
 Esta API REST foi desenvolvida como um exemplo de aplicação prática da Lei Geral de Proteção de Dados (LGPD), oferecendo rotas para cadastro, consulta, exclusão e anonimização dos dados de usuários.
 
 # Conceitos de LGPD implementados
-
 ## Coleta de dados pessoais previamnete planejada e justificada
 Rota `POST /usuarios` recebe nome, e-mail e CPF
 

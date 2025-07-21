@@ -3,6 +3,7 @@ from flask import Flask, request, jsonify
 import uuid
 from hashlib import sha256
 
+
 app = Flask(__name__)
 
 #lista simulada de usuários
@@ -27,7 +28,7 @@ def criar_usuario():
         'nome': dados.get('nome'),
         'email': dados.get('email'),
         'cpf_hash': hash_cpf(dados.get('cpf'))
-    }
+}
     
     #adiciona o usuário à lista
     usuarios.append(novo_usuario)
@@ -43,28 +44,26 @@ def obter_usuario(id):
     
     return jsonify({"error": "Usuário não encontrado"}), 404
 
-#(endpoint) rota para anonimizar um usuário (substituir o CPF por 'ANONIMIZADO')
-@app.route('/usuarios/<id>/anonimizar', methods=['POST'])
-def anonimizar_usuario(id):
+#(endpoint) rota para anonimizar um usuário (substituir o NOME por 'ANONIMIZADO')
+@app.route('/usuarios/<id>/anonimizar-nome', methods=['POST'])
+def anonimizar_nome(id):
     for usuario in usuarios:
         if usuario['id'] == id:
-            usuario['cpf_hash'] = 'ANONIMIZADO'
-    return app.response_class(
-        response=json.dumps({"error": "Usuário não encontrado"}, ensure_ascii=False),
-        mimetype='application/json'
-), 404
+            usuario['nome'] = 'USUÁRIO ANONIMIZADO'
+            return jsonify({"message": "Nome anonimizado com sucesso"})
+    
+    return jsonify({"error": "Usuário não encontrado"}), 404
 
-#(endpoint) rota para excluir um usuário pelo ID
+# (endpoint) rota para excluir um usuário pelo ID
 @app.route('/usuarios/<id>', methods=['DELETE'])
 def excluir_usuario(id):
     global usuarios
     usuarios = [usuario for usuario in usuarios if usuario['id'] != id]
-    mensagem = {"message": "Usuário excluído com sucesso"}
-    return app.response_class(
-        response=json.dumps(mensagem, ensure_ascii=False),
-        mimetype='application/json'
-    )
-
+    return jsonify({"message": "Usuário excluído com sucesso"})
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=True)
+
+
+#if __name__ == '__main__':
+#    app.run(debug=True, host='0.0.0.0', port=5000)

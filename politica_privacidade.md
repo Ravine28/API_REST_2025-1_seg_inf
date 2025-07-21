@@ -17,7 +17,7 @@
 
 ## 3. Finalidade do Tratamento
   Os dados são coletados para as seguintes finalidades:
-  - Criação e gerenciamento de contas de usuários;
+  - Criação e gerenciamento de cadastro de usuários;
   - Cumprimento de obrigações legais e regulatórias;
   - Comunicação com os usuários;
 
@@ -26,7 +26,7 @@
   Os dados são armazenados em banco de dados seguro, com as seguintes medidas de proteção:
   - A API funciona via HTTPS;
   - CPF's são imediatamente armazenados em formato criptografado (hash SHA-256);
-  - ID's podem ser anonimizados;
+  - Nomes podem ser anonimizados;
   - Acesso restrito a pessoal autorizado;
   - Sistemas protegidos por firewalls e outras tecnologias de segurança;
   - Auditorias periódicas de segurança;

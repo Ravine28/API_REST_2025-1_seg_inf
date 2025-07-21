@@ -46,7 +46,7 @@ def obter_usuario(id):
 def anonimizar_nome(id):
     for usuario in usuarios:
         if usuario['id'] == id:
-            usuario['nome'] = 'USUÁRIO ANONIMIZADO'
+            usuario['nome'] = 'NOME DE USUÁRIO ANONIMIZADO'
             return jsonify({"message": "Nome anonimizado com sucesso"})
     
     return jsonify({"error": "Usuário não encontrado"}), 404
@@ -57,6 +57,19 @@ def excluir_usuario(id):
     global usuarios
     usuarios = [usuario for usuario in usuarios if usuario['id'] != id]
     return jsonify({"message": "Usuário excluído com sucesso"})
+
+@app.route('/')
+def home():
+    return """
+    <h1>API LGPD - Cadastro de Usuários</h1>
+    <p>Endpoints disponíveis:</p>
+    <ul>
+        <li><b>POST /usuarios</b> - Criar novo usuário</li>
+        <li><b>GET /usuarios/&lt;id&gt;</b> - Buscar usuário</li>
+        <li><b>POST /usuarios/&lt;id&gt;/anonimizar-nome</b> - Anonimizar nome</li>
+        <li><b>DELETE /usuarios/&lt;id&gt;</b> - Excluir usuário</li>
+    </ul>
+    """
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)

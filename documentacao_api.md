@@ -74,7 +74,7 @@ Cria um novo usuário.
   Remove dados pessoais, substituindo-os por valores genéricos ou nulos.
     ex.: 
     Anonimizar usuário com ID 1
-      curl -X POST http://localhost:5000/usuarios/1/anonimizar
+      curl -X POST http://localhost:5000/usuarios/1/anonimizar-nome
 
 ---
 

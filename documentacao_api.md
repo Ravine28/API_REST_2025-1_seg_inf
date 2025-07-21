@@ -41,8 +41,8 @@
 Cria um novo usuário.
 
 **Campos obrigatórios:**
-  1) nome (string)
-  2) email (string - anonimizado via UUID (Universally Unique Identifier))
+  1) nome (string - anonimizado via UUID (Universally Unique Identifier))
+  2) email (string)
   3) CPF (criptografado via hash)
 
   ex.:
